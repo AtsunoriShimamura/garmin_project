@@ -31,8 +31,8 @@ for d in [RAW_DIR, PROCESSED_DIR, EXPORT_DIR]:
 def _create_client() -> Garmin:
     """Garmin Connect にログイン済みクライアントを返す内部関数"""
 
-    # プロジェクト直下の .env を読む
-    load_dotenv(PROJECT_ROOT / ".env")
+    # src 配下の .env を読む
+    load_dotenv(PROJECT_ROOT / "src" / ".env")
 
     username = os.environ["GARMIN_USERNAME"]
     password = os.environ["GARMIN_PASSWORD"]
